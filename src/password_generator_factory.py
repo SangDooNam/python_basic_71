@@ -9,5 +9,11 @@ class PasswordGeneratorFactory:
         :param generator_type: "Alpha" or "AlphaNumeric"
         :return: object AlphaGenerator or AlphaNumericGenerator
         """
-        # complete this method
+        if generator_type == 'Alpha':
+            return AlphaGenerator()
+        elif generator_type == 'AlphaNumeric':
+            return AlphaNumericGenerator()
+        raise TypeError('Unknown type')
+    
+
 
